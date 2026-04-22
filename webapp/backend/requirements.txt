@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+requests
+beautifulsoup4
+url-normalize
+pandas
+scikit-learn
+joblib
+nltk

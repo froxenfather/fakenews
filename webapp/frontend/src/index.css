@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Background */
+body {
+  background:
+    radial-gradient(circle at top left, rgba(120, 180, 255, 0.35), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(150, 100, 255, 0.28), transparent 40%),
+    linear-gradient(135deg, #0f172a 0%, #172554 35%, #1e3a8a 65%, #0f766e 100%);
+  color: white;
+}
+
+/*page layout  */
+.page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* this makes the stuff align in the center */
+.hero {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+}
+
+/* big fanxy titl;e */
+.title {
+  margin: 0;
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 800;
+  letter-spacing: -2px;
+  line-height: 1;
+  text-shadow: 0 0 24px rgba(255, 255, 255, 0.18);
+}
+
+/* "let us do our thing */
+.subtitle {
+  margin: 20px auto 36px;
+  max-width: 700px;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.6;
+}
+
+/* Input and button */
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  width: 100%;
+}
+
+/*  this is the input box, it has a lot of fancy css to make it look nice, i dont know how to explain it all but it looks good */
+/*  yeah i mighta ripped this straight from a different website thats why there are errors :3 */
+
+.urlInput {
+  width: min(800px, 100%);
+  padding: 20px 24px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  outline: none;
+  font-size: 1.05rem;
+  color: white;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.04),
+    0 0 30px rgba(72, 187, 255, 0.18),
+    0 12px 40px rgba(0, 0, 0, 0.22);
+  transition: 0.25s ease;
+}
+
+.urlInput::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.urlInput:focus {
+  border-color: rgba(125, 211, 252, 0.8);
+  box-shadow:
+    0 0 0 1px rgba(125, 211, 252, 0.35),
+    0 0 40px rgba(56, 189, 248, 0.28),
+    0 12px 40px rgba(0, 0, 0, 0.28);
+  transform: translateY(-1px);
+}
+
+/* nutton */
+.analyzeButton {
+  padding: 14px 34px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow:
+    0 8px 24px rgba(59, 130, 246, 0.35),
+    0 0 22px rgba(99, 102, 241, 0.22);
+  transition: 0.2s ease;
+}
+
+/* extra flair*/
+.analyzeButton:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow:
+    0 12px 30px rgba(59, 130, 246, 0.42),
+    0 0 26px rgba(99, 102, 241, 0.28);
+}
+
+.analyzeButton:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.errorMessage {
+  margin: 24px auto 0;
+  max-width: 800px;
+  padding: 14px 18px;
+  border-radius: 14px;
+  background: rgba(154, 49, 240, 0.14);
+  border: 1px solid rgba(217, 120, 255, 0.28);
+  color: #dad6ff;
+  text-align: left;
+}
+
+.resultPanel {
+  margin: 34px auto 0;
+  width: min(800px, 100%);
+  padding: 24px;
+  text-align: left;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.resultPanel h2 {
+  margin-top: 0;
+}
+
+.resultPanel p,
+.resultPanel summary {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+details {
+  margin-top: 16px;
+}
+
+details p {
+  margin-top: 12px;
+  line-height: 1.6;
+}
