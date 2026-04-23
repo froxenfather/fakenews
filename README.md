@@ -20,35 +20,21 @@ Needs to be named model.pkl as well
 
 Use jacks jypnb to make a file if it is missing
 
-## Start the Backend
+## Start the website
 
-Open Terminal 1 and run this exactly, you can just copy and paste as well:
+Open a terminal, or simply run 
 
 ```powershell
-cd webapp\backend
-pip install -r requirements.txt
-python -m uvicorn api:app --reload
+launch-web.py
 ```
+Two terminals will open, do not be alarmed!
 
-If it works, the backend will be running on:
+If it works, the backend will be running on one of the terminals:
 
 ```text
 http://127.0.0.1:8000
 ```
-
-Leave that ferminal open. DO NOT CLOSE EITHER
-
-## Start the Frontend
-
-Open Terminal 2 and run:
-
-```powershell
-cd frontend
-npm.cmd install
-npm.cmd run dev
-```
-
-Then open the local Vite link it gives you, usually:
+Then open the local Vite link it gives you on the second terminal, usually:
 
 ```text
 http://localhost:5173/
