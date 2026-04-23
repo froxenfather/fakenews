@@ -26,6 +26,7 @@ Does that make sense? does ANY of this make sense? if not, just ask and I can ex
 # needed so you chuds can load this from anywhere and it will still find the model file in the saved directory. Also good practice to keep file paths organized and not hardcode them all over the place i suppose
 BASE_DIR = Path(__file__).resolve().parent
 SAVED_DIR = BASE_DIR / "saved"
+MODEL_PATH = SAVED_DIR / "fake_news_model.pkl" #Change this name to swap models, make sure to save
 
 # BEAUTIFULSOUP4 and REQUESTS are imported in scraper.py, so we can use them there without importing here. This file is for model utils, so we keep it focused on that
 # bELOW IS A RESOURCE CHECKER, MODEL LOADER, TEXT CLEANER, FEATURE BUILDER, AND PREDICTION FUNCTION. THE API FILE CALLS THESE FUNCTIONS TO MAKE PREDICTIONS BASED ON SCRAPED DATA FROM THE WEBSITE
@@ -52,8 +53,7 @@ stop_words = set(stopwords.words("english"))
 
 
 def load_model():
-    model_path = SAVED_DIR / "model.pkl"
-    return joblib.load(model_path)
+    return joblib.load(MODEL_PATH)
 
 # Jacks Text Cleaner, url features code
 def clean_text(text):
