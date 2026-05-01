@@ -4,6 +4,10 @@ im so tired
 
 okay guys lets make a website
 
+Ryan Freese
+Aedon Kettles
+Jack 
+
 # Fake News
 
 Just pulled the repo and want the site running? Just follow these four billion simple steps for me!
@@ -85,4 +89,23 @@ npm.cmd run dev
 
 I cannot stress enough that you NEED node.js and it needs to be on your default path as well fellas
 
-Godspeed. Feel free to tweak ts
+Godspeed. Feel free to tweak
+
+# Other Files
+
+Model Training is all handled in the model training files
+
+EDA is in the EDA File. It contains a python script that you MUST run to fix the script (as i had a weird bug in my scraper)
+
+Website Scraper is in data-aqq
+
+## Full Run
+
+- Scrape websites with csv_website_scraper.ipynb
+- Fix CSV with csv_fixer after copying the scraped CSV into the same folder as EDA
+- Run the EDA to trim the file
+- Train a model with either of the model trainiers in model_training
+- Save the model.pkl and move it into webapp/backend/saved
+- select the models name in api.py
+- launch the website with launch_web.py
+
