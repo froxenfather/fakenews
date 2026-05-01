@@ -6,7 +6,7 @@ okay guys lets make a website
 
 Ryan Freese
 Aedon Kettles
-Jack 
+Jack Fortune
 
 # Fake News
 
